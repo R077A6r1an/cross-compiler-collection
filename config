@@ -1,0 +1,9 @@
+#!/bin/bash
+
+export ARCH=$(uname -m)
+
+for i in $(ls); do
+  cd $i
+  for i2 in $(ls); do
+    if [[ $i2 -eq i2 ]]; do
+      # TODO: implement it!
