@@ -1,9 +1,19 @@
 #!/bin/bash
 
 export ARCH=$(uname -m)
+export PWD=$(pwd)
+export VAL=$PWD
 
 for i in $(ls); do
   cd $i
   for i2 in $(ls); do
-    if [[ $i2 -eq i2 ]]; do
-      # TODO: implement it!
+    if [ $i2 -eq $ARCH ] ; do
+      cd $ARCH
+      VAL=$(ls)
+      PATH=$PATH:/$i/$ARCH/sbin
+    fi
+  done
+  cd PWD
+done
+
+# FIXME: test, if $i is a directory
