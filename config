@@ -10,7 +10,7 @@ for i in $(ls); do
     if [ $i2 -eq $ARCH ] ; then
       cd $ARCH
       VAL=$(ls)
-      PATH=$PATH:/$i/$ARCH/sbin
+      PATH=$PATH:/$i/$ARCH/VAL/sbin
     fi
   done
   cd PWD
